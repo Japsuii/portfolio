@@ -2,29 +2,47 @@
 import React from "react";
 import { ReactTyped } from "react-typed";
 import Image from "next/image";
-import Navbar from "@/components/navbar";
+import Lottie from "lottie-react";
+import { motion } from "framer-motion";
 import GetInTouchButton from "@/components/get_in_touch_button";
+import rocketAnimation from "@/components/Rocket-Animation.json";
+
+// Add the floating shadow animation styles
+const floatingShadowStyles = `
+  @keyframes floatingShadow {
+    0% {
+      box-shadow: 0px 0px 0px #bebebe, 0px 0px 0px #ffffff;
+    }
+    100% {
+      box-shadow: 20px 20px 30px #bebebe, -20px -20px 30px #ffffff;
+    }
+  }
+  
+  .floating-shadow {
+    animation: floatingShadow 1.5s ease-in forwards;
+  }
+`;
 
 export default function Home() {
+
   return (
     <div
-      className="bg-[linear-gradient(to_right,#293438,#242C30,#1D2429,#0F1314,#010000)] 
-        flex flex-col min-h-screen relative overflow-auto"
+      className="bg-[#e8e8e8] flex flex-col min-h-screen relative overflow-auto"
     >
-      <Navbar />
+      <style dangerouslySetInnerHTML={{ __html: floatingShadowStyles }} />
       <main className="flex-grow grid grid-cols-2 items-center justify-center px-4">
-        <div className="flex flex-col items-center text-center text-[#D3DAD9] space-y-10 p-16 bg-white/5 backdrop-blur-lg rounded-2xl shadow-2xl m-16 relative z-10">
+        <div className="rounded-[50px] bg-[#e8e8e8] floating-shadow flex flex-col items-center text-center space-y-5 py-20 mt-20 mx-25">
           <Image
             src="/img/logo.png"
             alt="web-icon"
-            width={180}
-            height={180}
-            className="mx-auto my-6 rounded-xl shadow-lg shadow-black/30 border-4 border-[#B5A642]/30"
+            width={150}
+            height={150}
+            className="mx-auto my-6 rounded-xl shadow-lg shadow-black/30 border-4 border-[#114077]"
           />
-          <h1 className="oswald text-2xl text-[#B5A642] md:text-5xl font-bold">
+          <h1 className="montserrat text-2xl text-[#114077] md:text-3xl font-bold">
             John Masahiro B. Shirai
           </h1>
-          <h2 className="text-lg md:text-2xl font-light text-[#B5A642]">
+          <h2 className="text-lg md:text-2xl font-light text-[#114077]">
             <ReactTyped
               strings={[
                 "Web Developer",
@@ -53,7 +71,41 @@ export default function Home() {
           </h2>
           <GetInTouchButton />
         </div>
-        <div className="relative flex items-center justify-center h-full w-full"></div>
+        
+        {/* Lottie Animation Column */}
+        <div className="relative flex items-center justify-center h-full w-full">
+          <div className="flex flex-col items-center text-center space-y-10 p-16 mt-25">            
+            <div className="relative w-full h-96 flex items-center justify-center">
+              {/* Main Lottie Animation - Rocket */}
+              <motion.div 
+                className="w-150"
+                initial={{ 
+                  opacity: 0, 
+                  x: -100 
+                }}
+                animate={{ 
+                  opacity: 1, 
+                  x: 0 
+                }}
+                transition={{ 
+                  duration: 1.5, 
+                  ease: "easeOut",
+                  delay: 0.5 
+                }}
+              >
+                <Lottie
+                  animationData={rocketAnimation}
+                  loop={true}
+                  autoplay={true}
+                  style={{ width: '100%', height: '100%' }}
+                  rendererSettings={{
+                    preserveAspectRatio: 'xMidYMid slice'
+                  }}
+                />
+              </motion.div>
+            </div>
+          </div>
+        </div>
       </main>
     </div>
   );

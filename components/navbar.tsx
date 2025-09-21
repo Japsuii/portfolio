@@ -4,8 +4,7 @@ import Image from "next/image";
 const Navbar = () => {
   return (
     <div
-        className="bg-[linear-gradient(to_right,#616161,#6D6D6D,#7D7D7D,#555555,#474747)] 
-        p-4 px-30 shadow-lg flex justify-between items-center montserrat text-lg"
+        className="bg-[#e8e8e8] fixed p-4 px-30 shadow-lg flex justify-between items-center montserrat text-lg z-10 w-full"
     >
       <div className="flex items-center space-x-4">
         <Image
@@ -15,15 +14,15 @@ const Navbar = () => {
           height={50}
           className="rounded-full"
         />
-        <h1 className="text=[#D3DAD9]">My Portfolio</h1>
+        <h1 className="text-[#37353E]">My Portfolio</h1>
       </div>
       <nav>
-        <ul className="flex space-x-10">
+        <ul className="flex space-x-10 text-[#37353E]">
           <li>
             <a href="">Home</a>
           </li>
           <li>
-            <a href="">About</a>
+            <a href="">About Me</a>
           </li>
           <li>
             <a href="">Projects</a>
