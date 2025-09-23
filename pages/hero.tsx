@@ -76,7 +76,6 @@ export default function Home() {
         <div className="relative flex items-center justify-center h-full w-full">
           <div className="flex flex-col items-center text-center space-y-10 p-16 mt-25">            
             <div className="relative w-full h-96 flex items-center justify-center">
-              {/* Main Lottie Animation - Rocket */}
               <motion.div 
                 className="w-130"
                 initial={{ 
