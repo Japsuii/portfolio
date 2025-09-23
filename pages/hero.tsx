@@ -5,7 +5,7 @@ import Image from "next/image";
 import Lottie from "lottie-react";
 import { motion } from "framer-motion";
 import GetInTouchButton from "@/components/get_in_touch_button";
-import rocketAnimation from "@/components/Rocket-Animation.json";
+import Technology from "@/components/Technology.json";
 
 // Add the floating shadow animation styles
 const floatingShadowStyles = `
@@ -94,7 +94,7 @@ export default function Home() {
                 }}
               >
                 <Lottie
-                  animationData={rocketAnimation}
+                  animationData={Technology}
                   loop={true}
                   autoplay={true}
                   style={{ width: '100%', height: '100%' }}
