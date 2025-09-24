@@ -30,14 +30,14 @@ export default function Home() {
       className="bg-[#e8e8e8] flex flex-col min-h-screen relative overflow-auto"
     >
       <style dangerouslySetInnerHTML={{ __html: floatingShadowStyles }} />
-      <main className="flex-grow grid grid-cols-2 items-center justify-center px-4">
-        <div className="rounded-[50px] bg-[#e8e8e8] floating-shadow flex flex-col items-center text-center space-y-5 py-20 mt-20 mx-25">
+      <main id="home" className="flex-grow grid grid-cols-1 lg:grid-cols-2 items-center justify-center px-4 sm:px-6 lg:px-12 gap-8 lg:gap-12">
+        <div className="rounded-[32px] sm:rounded-[40px] md:rounded-[50px] bg-[#e8e8e8] floating-shadow flex flex-col items-center text-center space-y-4 lg:space-y-5 py-10 sm:py-14 md:py-20 mt-24 lg:mt-20 w-full max-w-xl mx-auto">
           <Image
             src="/img/logo.png"
             alt="web-icon"
             width={150}
             height={150}
-            className="mx-auto my-6 rounded-xl shadow-lg shadow-black/30 border-4 border-[#87C16B]"
+            className="mx-auto my-4 sm:my-6 rounded-xl shadow-lg shadow-black/30 border-4 border-[#87C16B] w-24 sm:w-28 md:w-36 h-auto"
           />
           <h1 className="montserrat text-2xl text-[#87C16B] md:text-3xl font-bold">
             John Masahiro B. Shirai
@@ -71,13 +71,12 @@ export default function Home() {
           </h2>
           <GetInTouchButton />
         </div>
-        
         {/* Lottie Animation Column */}
-        <div className="relative flex items-center justify-center h-full w-full">
-          <div className="flex flex-col items-center text-center space-y-10 p-16 mt-25">            
-            <div className="relative w-full h-96 flex items-center justify-center">
+        <div className="relative flex items-center justify-center w-full">
+          <div className="flex flex-col items-center text-center space-y-8 sm:space-y-10 p-6 sm:p-10 lg:p-16 mt-6 md:mt-0 w-full">            
+            <div className="relative w-full h-64 sm:h-80 md:h-96 lg:h-[32rem] flex items-center justify-center">
               <motion.div 
-                className="w-130"
+                className="w-full max-w-[520px] md:max-w-[520px] lg:max-w-[800px]"
                 initial={{ 
                   opacity: 0, 
                   x: -100 

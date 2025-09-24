@@ -32,7 +32,7 @@ const Navbar = () => {
   const linkActive = "neo-btn--active";
   return (
     <div
-        className="bg-[#e8e8e8] fixed p-4 md:px-30 shadow-lg flex justify-between items-center montserrat text-lg z-10 w-full"
+        className="bg-[#e8e8e8] fixed p-4 md:px-10 xl:px-30 shadow-lg flex justify-between items-center montserrat text-lg z-10 w-full"
     >
       <div className="flex items-center space-x-4">
         <Image
@@ -45,7 +45,7 @@ const Navbar = () => {
         <h1 className="text-[#37353E]">JMBS</h1>
       </div>
       {/* Desktop nav */}
-      <nav className="hidden sm:block">
+      <nav className="hidden lg:block">
         <ul className="flex space-x-10 text-[#37353E]">
           <li>
             <a
@@ -84,7 +84,7 @@ const Navbar = () => {
       {/* Mobile menu toggle */}
       <button
         aria-label="Toggle menu"
-        className={`sm:hidden inline-flex ${linkBase} ${isMenuOpen ? linkActive : ""}`}
+        className={`lg:hidden inline-flex ${linkBase} ${isMenuOpen ? linkActive : ""}`}
         onClick={() => setIsMenuOpen(v => !v)}
       >
         {isMenuOpen ? (
@@ -105,7 +105,7 @@ const Navbar = () => {
       {/* Mobile dropdown */}
       <div
         className={
-          `absolute top-full left-0 w-full bg-[#e8e8e8] sm:hidden shadow-lg overflow-hidden ` +
+          `absolute top-full left-0 w-full bg-[#e8e8e8] lg:hidden shadow-lg overflow-hidden ` +
           `transition-all duration-300 ease-out transform origin-top ` +
           (isMenuOpen ? `opacity-100 translate-y-0 max-h-96` : `opacity-0 -translate-y-2 max-h-0 pointer-events-none`)
         }
