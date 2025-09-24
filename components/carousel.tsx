@@ -4,12 +4,32 @@ import { Icon } from "@iconify/react";
 
 // Add the animation styles
 const animationStyles = `
+  /* Responsive variables on the carousel root */
+  .carousel {
+    --slide-width: 110px;
+    --slide-height: 44px;
+  }
+
+  @media (min-width: 640px) {
+    .carousel {
+      --slide-width: 130px;
+      --slide-height: 48px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .carousel {
+      --slide-width: 150px;
+      --slide-height: 50px;
+    }
+  }
+
   @keyframes carouselScroll {
     0% {
       transform: translateX(0);
     }
     100% {
-      transform: translateX(calc(-150px * 11));
+      transform: translateX(calc(var(--slide-width) * -11));
     }
   }
   
@@ -25,12 +45,12 @@ const animationStyles = `
   .carousel-scroll-container {
     animation: carouselScroll 20s linear infinite;
     display: flex;
-    width: calc(150px * 22);
+    width: calc(var(--slide-width) * 22);
   }
   
   .carousel-slide {
-    height: 50px;
-    width: 150px;
+    height: var(--slide-height);
+    width: var(--slide-width);
     flex-shrink: 0;
   }
   
@@ -82,29 +102,29 @@ export default function TechStackCarousel() {
   ];
 
   return (
-    <div className="flex flex-col items-center text-center space-y-10 p-16 w-full">
+    <div className="flex flex-col items-center text-center space-y-8 sm:space-y-10 px-4 sm:px-8 lg:px-16 py-10 sm:py-12 lg:py-16 w-full">
       <style dangerouslySetInnerHTML={{ __html: animationStyles }} />
       
       {/* Infinite Carousel Container */}
       <div 
         ref={carouselRef}
-        className={`relative w-full overflow-hidden rounded-full bg-[#e8e8e8] p-8 ${isInView ? 'floating-shadow' : ''}`}
+        className={`carousel relative w-full overflow-hidden rounded-full bg-[#e8e8e8] p-4 sm:p-6 lg:p-8 ${isInView ? 'floating-shadow' : ''}`}
       >
         {/* Left fade gradient */}
-        <div className="absolute left-0 top-0 h-full w-30 bg-gradient-to-r from-[#e8e8e8] to-transparent z-10 pointer-events-none"></div>
+        <div className="absolute left-0 top-0 h-full w-12 sm:w-20 lg:w-30 bg-gradient-to-r from-[#e8e8e8] to-transparent z-10 pointer-events-none"></div>
         
         {/* Right fade gradient */}
-        <div className="absolute right-0 top-0 h-full w-30 bg-gradient-to-l from-[#e8e8e8] to-transparent z-10 pointer-events-none"></div>
+        <div className="absolute right-0 top-0 h-full w-12 sm:w-20 lg:w-30 bg-gradient-to-l from-[#e8e8e8] to-transparent z-10 pointer-events-none"></div>
         
         <div className="carousel-scroll-container">
           {/* First set of technologies */}
           {technologies.map((tech, index) => (
             <div key={`first-${index}`} className="carousel-slide flex items-center justify-center group">
-              <div className="flex items-center space-x-3">
-                <div className="w-15 h-15 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <Icon icon={tech.icon} className="w-10 h-10" />
+              <div className="flex items-center space-x-2 sm:space-x-3">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <Icon icon={tech.icon} className="w-7 h-7 sm:w-8 sm:h-8" />
                 </div>
-                <span className="text-[#071F3B] text-base font-medium">{tech.name}</span>
+                <span className="text-[#071F3B] text-sm sm:text-base font-medium">{tech.name}</span>
               </div>
             </div>
           ))}
@@ -112,11 +132,11 @@ export default function TechStackCarousel() {
           {/* Duplicate set for seamless loop */}
           {technologies.map((tech, index) => (
             <div key={`second-${index}`} className="carousel-slide flex items-center justify-center group">
-              <div className="flex items-center space-x-3">
-                <div className="w-15 h-15 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <Icon icon={tech.icon} className="w-10 h-10" />
+              <div className="flex items-center space-x-2 sm:space-x-3">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <Icon icon={tech.icon} className="w-7 h-7 sm:w-8 sm:h-8" />
                 </div>
-                <span className="text-[#071F3B] text-base font-medium">{tech.name}</span>
+                <span className="text-[#071F3B] text-sm sm:text-base font-medium">{tech.name}</span>
               </div>
             </div>
           ))}
