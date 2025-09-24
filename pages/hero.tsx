@@ -37,12 +37,12 @@ export default function Home() {
             alt="web-icon"
             width={150}
             height={150}
-            className="mx-auto my-6 rounded-xl shadow-lg shadow-black/30 border-4 border-[#114077]"
+            className="mx-auto my-6 rounded-xl shadow-lg shadow-black/30 border-4 border-[#87C16B]"
           />
-          <h1 className="montserrat text-2xl text-[#114077] md:text-3xl font-bold">
+          <h1 className="montserrat text-2xl text-[#87C16B] md:text-3xl font-bold">
             John Masahiro B. Shirai
           </h1>
-          <h2 className="text-lg md:text-2xl font-light text-[#114077]">
+          <h2 className="text-lg md:text-2xl font-light text-[#87C16B]">
             <ReactTyped
               strings={[
                 "Web Developer",
