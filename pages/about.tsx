@@ -52,11 +52,11 @@ export default function About() {
                         {/* Left: Avatar and quick info */}
                         <motion.div variants={itemUp} className="flex flex-col items-center text-center space-y-5 floating-shadow rounded-[22px] sm:rounded-[30px] md:rounded-[40px] bg-[#e8e8e8] p-16">
                             <Image
-                                src="/img/logo.png"
+                                src="/img/man.png"
                                 alt="Profile picture"
                                 width={220}
                                 height={220}
-                                className="rounded-2xl shadow-lg shadow-black/30 border-4 border-[#87C16B] w-28 sm:w-36 md:w-48 h-auto transition-transform duration-300 will-change-transform hover:scale-105"
+                                className="rounded-2xl drop-shadow drop-shadow-lg drop-shadow-black/50 w-28 sm:w-36 md:w-48 h-auto transition-transform duration-300 will-change-transform hover:scale-105"
                             />
                             <div>
                                 <h1 className="montserrat text-2xl md:text-3xl font-bold text-[#87C16B]">About Me</h1>
