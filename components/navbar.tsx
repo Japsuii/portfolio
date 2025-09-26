@@ -32,7 +32,7 @@ const Navbar = () => {
   const linkActive = "neo-btn--active";
   return (
     <div
-        className="bg-[#e8e8e8] fixed p-4 md:px-10 xl:px-30 shadow-lg flex justify-between items-center montserrat text-lg z-10 w-full"
+        className="bg-[#e8e8e8] fixed p-4 md:px-10 xl:px-30 shadow-lg flex justify-between items-center montserrat text-lg z-100 w-full"
     >
       <div className="flex items-center space-x-4">
         <Image

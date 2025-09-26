@@ -102,7 +102,7 @@ export default function TechStackCarousel() {
   ];
 
   return (
-    <div className="flex flex-col items-center text-center space-y-8 sm:space-y-10 px-4 sm:px-8 lg:px-16 py-10 sm:py-12 lg:py-16 w-full">
+    <div className="flex flex-col items-center text-center space-y-8 sm:space-y-10 px-4 sm:px-8 lg:px-25 pt-5 w-full">
       <style dangerouslySetInnerHTML={{ __html: animationStyles }} />
       
       {/* Infinite Carousel Container */}

@@ -30,8 +30,8 @@ export default function Home() {
       className="bg-[#e8e8e8] flex flex-col min-h-screen relative overflow-auto"
     >
       <style dangerouslySetInnerHTML={{ __html: floatingShadowStyles }} />
-      <main id="home" className="flex-grow grid grid-cols-1 lg:grid-cols-2 items-center justify-center px-4 sm:px-6 lg:px-12 gap-8 lg:gap-12">
-        <div className="rounded-[32px] sm:rounded-[40px] md:rounded-[50px] bg-[#e8e8e8] floating-shadow flex flex-col items-center text-center space-y-4 lg:space-y-5 py-10 sm:py-14 md:py-20 mt-24 lg:mt-20 w-full max-w-xl mx-auto">
+      <main id="home" className="flex-grow grid grid-cols-1 lg:grid-cols-2 items-center justify-center px-4 sm:px-10 lg:px-25 lg:gap-12">
+        <div className="rounded-[32px] sm:rounded-[40px] md:rounded-[50px] bg-[#e8e8e8] floating-shadow flex flex-col items-center text-center space-y-4 lg:space-y-5 py-10 sm:py-14 md:py-20 mt-24 lg:mt-20 w-full mx-auto">
           <Image
             src="/img/logo.png"
             alt="web-icon"
