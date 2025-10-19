@@ -1,7 +1,9 @@
 "use client";
 import React, { useEffect, useState } from "react";
+
 import Image from "next/image";
 import { usePathname } from "next/navigation";
+import { Download } from "lucide-react";
 
 const Navbar = () => {
   const pathname = usePathname();
@@ -45,8 +47,8 @@ const Navbar = () => {
         <h1 className="text-[#37353E]">JMBS</h1>
       </div>
       {/* Desktop nav */}
-      <nav className="hidden lg:block">
-        <ul className="flex space-x-7 text-[#37353E]">
+      <nav className="hidden lg:flex items-center">
+        <ul className="flex space-x-3 text-[#37353E]">
           <li>
             <a
               href="#home"
@@ -88,6 +90,15 @@ const Navbar = () => {
             </a>
           </li>
         </ul>
+        <a
+          href="/Resume.pdf"
+          download
+          className="ml-3 flex items-center gap-2 px-4 py-2 rounded-[14px] bg-[#87C16B] text-white font-medium text-sm shadow-[inset_0_0_1.6em_-0.6em_#3C464B] hover:bg-[#6ea05a] transition-colors"
+          aria-label="Download Resume"
+        >
+          <Download size={18} />
+          Download Resume
+        </a>
       </nav>
       {/* Mobile menu toggle */}
       <button
@@ -163,6 +174,17 @@ const Navbar = () => {
               onClick={() => setIsMenuOpen(false)}
             >
               Contact
+            </a>
+          </li>
+          <li className="w-full">
+            <a
+              href="/Resume.pdf"
+              download
+              className="mt-2 flex items-center gap-2 px-4 py-2 rounded-[14px] bg-[#87C16B] text-white font-medium text-sm shadow-[inset_0_0_1.6em_-0.6em_#3C464B] hover:bg-[#6ea05a] transition-colors w-full justify-center"
+              aria-label="Download Resume"
+            >
+              <Download size={18} />
+              Download Resume
             </a>
           </li>
         </ul>

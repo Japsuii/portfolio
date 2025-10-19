@@ -1,10 +1,10 @@
 "use client";
 
+
 import React from "react";
 import { useState, useCallback } from "react";
 import { motion, Variants } from "framer-motion";
-
-
+import { Download } from "lucide-react";
 
 const itemUp: Variants = {
     hidden: { opacity: 0, y: 18 },
@@ -73,7 +73,18 @@ export default function Contact() {
                                 <h2 className="text-lg md:text-xl font-semibold text-[#87C16B]">Contact Details</h2>
                                 <p className="text-sm">Email: <a href="mailto:johnmasahiroshirai@gmail.com" className="underline decoration-[#87C16B] underline-offset-4">johnmasahiroshirai@gmail.com</a></p>
                                 <p className="text-sm">Phone Number: +639150323682</p>
+
                                 <p className="text-sm">Available for freelance and full-time opportunities.</p>
+
+                                <a
+                                    href="/Resume.pdf"
+                                    download
+                                    className="mt-2 flex items-center gap-2 px-4 py-2 rounded-[14px] bg-[#87C16B] text-white font-medium text-sm shadow-[inset_0_0_1.6em_-0.6em_#3C464B] hover:bg-[#6ea05a] transition-colors"
+                                    aria-label="Download Resume"
+                                >
+                                    <Download size={18} />
+                                    Download Resume
+                                </a>
 
                                 <div className="pt-2">
                                     <h3 className="text-sm font-semibold text-[#87C16B]">Socials</h3>
