@@ -4,10 +4,7 @@ import React from "react";
 import { useState, useCallback } from "react";
 import { motion, Variants } from "framer-motion";
 
-const container: Variants = {
-    hidden: { opacity: 0 },
-    show: { opacity: 1, transition: { staggerChildren: 0.12, delayChildren: 0.1 } }
-};
+
 
 const itemUp: Variants = {
     hidden: { opacity: 0, y: 18 },
@@ -51,8 +48,12 @@ export default function Contact() {
 
             setStatus({ ok: true, msg: json.message || "Message sent successfully." });
             form.reset();
-        } catch (err: any) {
-            setStatus({ ok: false, msg: err?.message || "Something went wrong." });
+        } catch (err: unknown) {
+            let errorMsg = "Something went wrong.";
+            if (err instanceof Error) {
+                errorMsg = err.message;
+            }
+            setStatus({ ok: false, msg: errorMsg });
         } finally {
             setIsSending(false);
         }
