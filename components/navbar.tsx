@@ -32,7 +32,7 @@ const Navbar = () => {
   const linkActive = "neo-btn--active";
   return (
     <div
-        className="bg-[#e8e8e8] fixed p-4 md:px-10 xl:px-30 shadow-lg flex justify-between items-center montserrat text-lg z-100 w-full"
+      className="bg-[#e8e8e8] fixed p-4 md:px-10 xl:px-30 shadow-lg flex justify-between items-center montserrat z-100 w-full"
     >
       <div className="flex items-center space-x-4">
         <Image
@@ -46,7 +46,7 @@ const Navbar = () => {
       </div>
       {/* Desktop nav */}
       <nav className="hidden lg:block">
-        <ul className="flex space-x-10 text-[#37353E]">
+        <ul className="flex space-x-7 text-[#37353E]">
           <li>
             <a
               href="#home"
@@ -61,6 +61,14 @@ const Navbar = () => {
               className={`inline-flex ${linkBase} ${isActive("#about") ? linkActive : ""}`}
             >
               About Me
+            </a>
+          </li>
+          <li>
+            <a
+              href="#experience"
+              className={`inline-flex ${linkBase} ${isActive("#experience") ? linkActive : ""}`}
+            >
+              Experience
             </a>
           </li>
           <li>
@@ -111,44 +119,53 @@ const Navbar = () => {
         }
         aria-hidden={!isMenuOpen}
       >
-          <ul className="flex flex-col items-stretch space-y-4 p-4 text-[#37353E]">
-            <li className="w-full">
-              <a
-                href="#home"
-                className={`flex ${linkBase} w-full justify-center text-center ${isActive("#home") ? linkActive : ""}`}
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Home
-              </a>
-            </li>
-            <li className="w-full">
-              <a
-                href="#about"
-                className={`flex ${linkBase} w-full justify-center text-center ${isActive("#about") ? linkActive : ""}`}
-                onClick={() => setIsMenuOpen(false)}
-              >
-                About Me
-              </a>
-            </li>
-            <li className="w-full">
-              <a
-                href="#projects"
-                className={`flex ${linkBase} w-full justify-center text-center ${isActive("#projects") ? linkActive : ""}`}
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Projects
-              </a>
-            </li>
-            <li className="w-full">
-              <a
-                href="#contact"
-                className={`flex ${linkBase} w-full justify-center text-center ${isActive("#contact") ? linkActive : ""}`}
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Contact
-              </a>
-            </li>
-          </ul>
+        <ul className="flex flex-col items-stretch space-y-4 p-4 text-[#37353E]">
+          <li className="w-full">
+            <a
+              href="#home"
+              className={`flex ${linkBase} w-full justify-center text-center ${isActive("#home") ? linkActive : ""}`}
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Home
+            </a>
+          </li>
+          <li className="w-full">
+            <a
+              href="#about"
+              className={`flex ${linkBase} w-full justify-center text-center ${isActive("#about") ? linkActive : ""}`}
+              onClick={() => setIsMenuOpen(false)}
+            >
+              About Me
+            </a>
+          </li>
+          <li className="w-full">
+            <a
+              href="#experience"
+              className={`flex ${linkBase} w-full justify-center text-center ${isActive("#about") ? linkActive : ""}`}
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Experience
+            </a>
+          </li>
+          <li className="w-full">
+            <a
+              href="#projects"
+              className={`flex ${linkBase} w-full justify-center text-center ${isActive("#projects") ? linkActive : ""}`}
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Projects
+            </a>
+          </li>
+          <li className="w-full">
+            <a
+              href="#contact"
+              className={`flex ${linkBase} w-full justify-center text-center ${isActive("#contact") ? linkActive : ""}`}
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Contact
+            </a>
+          </li>
+        </ul>
       </div>
     </div>
   );

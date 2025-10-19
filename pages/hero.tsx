@@ -27,10 +27,10 @@ export default function Home() {
 
   return (
     <div
-      className="bg-[#e8e8e8] flex flex-col min-h-screen relative overflow-auto"
+      className="bg-[#e8e8e8] flex flex-col relative overflow-auto"
     >
       <style dangerouslySetInnerHTML={{ __html: floatingShadowStyles }} />
-      <main id="home" className="flex-grow grid grid-cols-1 lg:grid-cols-2 items-center justify-center px-4 sm:px-10 lg:px-25 lg:gap-12">
+      <main id="home" className="flex-grow grid grid-cols-1 lg:grid-cols-2 items-center justify-center px-4 sm:px-10 lg:px-20 lg:py-10 lg:gap-12">
         <div className="rounded-[32px] sm:rounded-[40px] md:rounded-[50px] bg-[#e8e8e8] floating-shadow flex flex-col items-center text-center space-y-4 lg:space-y-5 py-10 sm:py-14 md:py-20 mt-24 lg:mt-20 w-full mx-auto">
           <Image
             src="/img/logo.png"
@@ -39,10 +39,10 @@ export default function Home() {
             height={150}
             className="mx-auto my-4 sm:my-6 rounded-xl shadow-lg shadow-black/30 border-4 border-[#87C16B] w-24 sm:w-28 md:w-36 h-auto"
           />
-          <h1 className="montserrat text-2xl text-[#87C16B] md:text-3xl font-bold">
+          <h1 className="font-mono text-2xl text-[#87C16B] md:text-3xl font-bold">
             John Masahiro B. Shirai
           </h1>
-          <h2 className="text-lg md:text-2xl font-light text-[#87C16B]">
+          <h2 className="font-mono text-lg md:text-2xl font-light text-[#87C16B]">
             <ReactTyped
               strings={[
                 "Web Developer",

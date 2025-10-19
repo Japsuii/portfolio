@@ -43,7 +43,7 @@ function RevealOnView({ children, className = "", variants = fadeUp }: { childre
 
 export default function About() {
     return (
-        <div className="bg-[#e8e8e8] min-h-screen w-full">
+        <div className="bg-[#e8e8e8] min-h-screen w-full montserrat">
             <style dangerouslySetInnerHTML={{ __html: animationStyles }} />
             <main id="about" className="px-0 lg:px-15 pt-5 lg:pt-20 pb-16">
                 {/* Card */}
@@ -140,6 +140,7 @@ export default function About() {
                         </motion.div>
                     ))}
                 </RevealOnView>
+                
             </main>
         </div>
     );

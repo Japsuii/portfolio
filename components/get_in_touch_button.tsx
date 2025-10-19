@@ -1,9 +1,12 @@
 import React from "react";
+import Link from "next/link";
 
 const get_in_touch_button = () => {
   return (
     <div>
-      <button
+      <Link
+        href="#contact"
+        aria-label="Get in touch"
         className="relative bg-[#87C16B] text-white font-medium text-[17px] px-4 py-[0.35em] pl-5 h-[2.8em] rounded-[0.9em] flex items-center overflow-hidden cursor-pointer shadow-[inset_0_0_1.6em_-0.6em_#3C464B] group"
       >
         <span className="mr-10">Get in Touch</span>
@@ -24,7 +27,7 @@ const get_in_touch_button = () => {
             ></path>
           </svg>
         </div>
-      </button>
+      </Link>
 
     </div>
   );
