@@ -178,7 +178,7 @@ const Navbar = () => {
           </li>
           <li className="w-full">
             <a
-              href="/Resume.pdf"
+              href="/Resume - John Masahiro Shirais.pdf"
               download
               className="mt-2 flex items-center gap-2 px-4 py-2 rounded-[14px] bg-[#87C16B] text-white font-medium text-sm shadow-[inset_0_0_1.6em_-0.6em_#3C464B] hover:bg-[#6ea05a] transition-colors w-full justify-center"
               aria-label="Download Resume"
