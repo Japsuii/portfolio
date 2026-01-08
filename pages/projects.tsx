@@ -83,7 +83,7 @@ const projects: Project[] = [
             "Product listings, categories, and basic checkout flow",
             "Admin tools for inventory and order status updates"
         ],
-        image: "https://istanbulfashioncenter.com/cdn/shop/articles/differences-between-boutiques-and-chain--9768.jpg?v=1744628368", // provided clothing image
+        image: "https://media.istockphoto.com/id/1210584470/photo/menswear-store.jpg?s=612x612&w=0&k=20&c=8YjvKhiJjOlm7APvfmdpkAfn7Xm1xy0niLhMkcHvc84=", // provided clothing image
     }
 ];
 
